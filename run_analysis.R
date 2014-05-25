@@ -47,7 +47,7 @@ featurenames <- gsub("([[:space:]])", "", features$V2, perl = TRUE)
 featurenames <- gsub("([[:punct:]])", "", featurenames, perl = TRUE)
 featurenames <- gsub("([[:upper:]])", "\\L\\1", featurenames, perl = TRUE)
 
-# Assign names to df.dat.full
+# Assign names to datasetfull
 #   Filter avg+std columns + subject + activity into a new data frame
 names(datasetfull) <- c(featurenames, "subject", "activity")
 datasetmeanstd <- datasetfull[c(featurefilter, TRUE, TRUE)]
